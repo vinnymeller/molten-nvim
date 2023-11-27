@@ -144,6 +144,7 @@ If you use home manager and have configure Neovim through it, you can set up the
   { pkgs, ... }:
   let
     # the vimPlugins.molten-nvim package has not been merged into nixpkgs yet but for now you can use this
+    # if you're using nixos-unstable, as of commit db8273 this is no longer necessary
     molten-nvim = pkgs.callPackage pkgs.vimUtils.buildVimPlugin {
       pname = "molten-nvim";
       version = "2023-10-21";
